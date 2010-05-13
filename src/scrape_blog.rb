@@ -20,6 +20,7 @@ posts.each do |post|
     content = post.search("//div[@class='post-content-inner").inner_text
     # vs. inner_html -- lots of extra crud
     # vs .inner_text.strip
+    # post.search("//div[@class='post-content-inner").xpath gives unique path
 
    # post/'div' == post.search("//div") not post.search("/div")
 
