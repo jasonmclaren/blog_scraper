@@ -11,13 +11,13 @@ posts = doc.search("//div[@class='post-inner']")
 # posts[0].inner_text
 
 posts.each do |post|
-    name = post.search("span[@class='name']").inner_text
+    name = post.search("//span[@class='name']").inner_text
     # posts.search("span[@class='name']") returns more elements
 
     date = post.search("//p[@class='post-info']/small/span/span[@class='date']").inner_text
     # post.search iteratively down the tree
 
-    content = post.search("//div[@class='post-content-inner").inner_text
+    content = post.search("//div[@class='post-content-inner]").inner_text
     # vs. inner_html -- lots of extra crud
     # vs .inner_text.strip
     # post.search("//div[@class='post-content-inner").xpath gives unique path
